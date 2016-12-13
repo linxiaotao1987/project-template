@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* line 2, ../sass/assembly/_reset.scss */
+* {
+  -webkit-tap-highlight-color: transparent;
+  /*去掉点击高亮,如a标签及输入控件*/ }
+
+/* line 5, ../sass/assembly/_reset.scss */
+body, nav, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, ul, ol, li, input, button, textarea, footer {
+  margin: 0;
+  padding: 0; }
+
+/* line 9, ../sass/assembly/_reset.scss */
+body {
+  font: 0px "微软雅黑",helvetica,arial;
+  background: #ffffff;
+  -webkit-text-size-adjust: none; }
+
+/* line 14, ../sass/assembly/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+/* line 18, ../sass/assembly/_reset.scss */
+ul, ol, dl {
+  list-style: none; }
+
+/* line 21, ../sass/assembly/_reset.scss */
+li {
+  list-style: none; }
+
+/* line 24, ../sass/assembly/_reset.scss */
+i {
+  font-style: normal; }
+
+/* line 27, ../sass/assembly/_reset.scss */
+form {
+  display: inline; }
+
+/* line 30, ../sass/assembly/_reset.scss */
+a {
+  text-decoration: none; }
+
+/* line 33, ../sass/assembly/_reset.scss */
+a:hover, a:active, a:focus {
+  text-decoration: none; }
+
+/* line 37, ../sass/assembly/_reset.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 42, ../sass/assembly/_reset.scss */
+button, input, select {
+  font-size: 100%;
+  outline: 0; }
+
+/* line 46, ../sass/assembly/_reset.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  border: none;
+  outline: none; }
+
+/* line 52, ../sass/assembly/_reset.scss */
+input:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+/* line 56, ../sass/assembly/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*去除按钮点击高亮*/
+/* line 62, ../sass/assembly/_reset.scss */
+button {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent; }
+
+/*去除按钮点击高亮end*/
+/*type=number时右边的那两个箭头去掉*/
+/* line 72, ../sass/assembly/_reset.scss */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
+/*按钮点击闪烁的颜色变为透明*/
+/* line 77, ../sass/assembly/_reset.scss */
+input, select {
+  -webkit-tap-highlight-color: transparent; }
+
+/*清除默认*/
+/*项目用到的颜色*/
+/*主色辅色*/
+/*警示色*/
+/*按钮不可点击颜色*/
+/*输入框的placeholder颜色*/
+/*背景边框*/
+/*文本颜色*/
+/*兼容大分辨率屏幕一像素边框变2px或3px的效果*/
+/*用来被继承的占位样式*/
+/*颜色控制文件*/
+/*鎻愪氦鍚庣殑loading*/
+/* line 2, ../sass/assembly/_ajaxLoadbox.scss */
+.Lin-popupStatusBox {
+  display: none;
+  position: fixed;
+  padding: .3rem;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: .08rem;
+  z-index: 19; }
+  /* line 12, ../sass/assembly/_ajaxLoadbox.scss */
+  .Lin-popupStatusBox.hide {
+    -webkit-animation: hide linear .5s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards; }
+    /* line 16, ../sass/assembly/_ajaxLoadbox.scss */
+    .Lin-popupStatusBox.hide > .loadBox {
+      display: none; }
+    /* line 19, ../sass/assembly/_ajaxLoadbox.scss */
+    .Lin-popupStatusBox.hide > .tips {
+      display: block; }
+  /* line 23, ../sass/assembly/_ajaxLoadbox.scss */
+  .Lin-popupStatusBox > .loadBox {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    -webkit-animation: rotate 2s linear infinite; }
+    /* line 28, ../sass/assembly/_ajaxLoadbox.scss */
+    .Lin-popupStatusBox > .loadBox > div {
+      position: absolute;
+      left: -webkit-calc(50% + .16rem);
+      top: -webkit-calc(50% - .02rem);
+      width: .2rem;
+      height: .04rem;
+      background: #cccccc;
+      -webkit-transform-origin: -.16rem 50%; }
+      /* line 36, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(1) {
+        -webkit-transform: rotate(0deg); }
+      /* line 39, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(2) {
+        -webkit-transform: rotate(30deg); }
+      /* line 42, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(3) {
+        -webkit-transform: rotate(60deg); }
+      /* line 45, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(4) {
+        -webkit-transform: rotate(90deg); }
+      /* line 48, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(5) {
+        -webkit-transform: rotate(120deg); }
+      /* line 51, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(6) {
+        -webkit-transform: rotate(150deg); }
+      /* line 54, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(7) {
+        -webkit-transform: rotate(180deg); }
+      /* line 57, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(8) {
+        -webkit-transform: rotate(210deg); }
+      /* line 60, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(9) {
+        -webkit-transform: rotate(240deg); }
+      /* line 63, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(10) {
+        -webkit-transform: rotate(270deg); }
+      /* line 66, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(11) {
+        -webkit-transform: rotate(300deg); }
+      /* line 69, ../sass/assembly/_ajaxLoadbox.scss */
+      .Lin-popupStatusBox > .loadBox > div:nth-child(12) {
+        -webkit-transform: rotate(330deg); }
+  /* line 74, ../sass/assembly/_ajaxLoadbox.scss */
+  .Lin-popupStatusBox > .tips {
+    display: none;
+    color: #ffffff;
+    font-size: .28rem; }
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(0deg); }
+  100% {
+    -webkit-transform: rotateZ(360deg); } }
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+/*end*/
+/* line 8, ../sass/public.scss */
+html {
+  height: 100%; }
+
+/* line 12, ../sass/public.scss */
+.test {
+  width: 100px;
+  height: 100px;
+  background: #f00; }

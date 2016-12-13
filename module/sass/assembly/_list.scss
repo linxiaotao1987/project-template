@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import "color";
+@import "extend";
+/*列表字体设置*/
+$listFontSize:16px;
+$titleFontSize:14px;
+
+/*列表字体设置*/
+
+/*列表的基础样式*/
+.u-cells {
+  margin-top: 0.12rem;
+  background-color: #fff;
+  line-height: 1.4;
+  font-size: $listFontSize;
+  overflow: hidden;
+  position: relative;
+  &>.cell {
+    display: -webkit-box;
+    padding: 10px 15px;
+    position: relative;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+
+/*列表的基础样式end*/
+
+/*列表标题*/
+.u-cells-title {
+  margin:.77em 0 .3em 0;
+  padding:0 15px;
+  color: #888;
+  font-size: $titleFontSize;
+  & + .u-cells {
+    margin-top:0px;
+  }
+}
+/*列表标题end*/

@@ -1,0 +1,97 @@
+/*提交后的loading*/
+.Lin-popupStatusBox {
+  display: none;
+  position: fixed;
+  padding:.3rem;
+  left:50%;
+  top:50%;
+  -webkit-transform:translate(-50%,-50%);
+  background: rgba(0,0,0,.6);
+  border-radius:.08rem;
+  z-index: 19;
+  &.hide {
+    -webkit-animation: hide linear .5s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode:forwards;
+    &>.loadBox {
+      display: none;
+    }
+    &>.tips {
+      display: block;
+    }
+  }
+  &>.loadBox {
+    position: relative;
+    width:2rem;
+    height:2rem;
+    -webkit-animation: rotate 2s linear infinite;
+    &>div {
+      position: absolute;
+      left:-webkit-calc(50% + .16rem);
+      top:-webkit-calc(50% - .02rem);
+      width:.2rem;
+      height:.04rem;
+      background: #cccccc;
+      -webkit-transform-origin: -.16rem 50%;
+      &:nth-child(1) {
+        -webkit-transform:rotate(0deg);
+      }
+      &:nth-child(2) {
+        -webkit-transform:rotate(30deg);
+      }
+      &:nth-child(3) {
+        -webkit-transform:rotate(60deg);
+      }
+      &:nth-child(4) {
+        -webkit-transform:rotate(90deg);
+      }
+      &:nth-child(5) {
+        -webkit-transform:rotate(120deg);
+      }
+      &:nth-child(6) {
+        -webkit-transform:rotate(150deg);
+      }
+      &:nth-child(7) {
+        -webkit-transform:rotate(180deg);
+      }
+      &:nth-child(8) {
+        -webkit-transform:rotate(210deg);
+      }
+      &:nth-child(9) {
+        -webkit-transform:rotate(240deg);
+      }
+      &:nth-child(10) {
+        -webkit-transform:rotate(270deg);
+      }
+      &:nth-child(11) {
+        -webkit-transform:rotate(300deg);
+      }
+      &:nth-child(12) {
+        -webkit-transform:rotate(330deg);
+      }
+    }
+  }
+  &>.tips {
+    display: none;
+    color:#ffffff;
+    font-size:.28rem;
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform:rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform:rotateZ(360deg);
+  }
+}
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*end*/

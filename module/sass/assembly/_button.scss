@@ -1,0 +1,96 @@
+@charset "utf-8";
+@import "color";
+@import "extend";
+/*按钮*/
+
+/*按钮大小设置*/
+$fontSize:0.32rem;
+$fontSizeMini:0.28rem;
+$height:0.88rem;
+$borderRadius:0.08rem;
+$afterBorderRadius:0.16rem;
+/*按钮大小设置end*/
+
+
+.u-btn {
+  position: relative;
+  display: block;
+  padding:0px 0.15rem;
+  text-align: center;
+  line-height: $height;
+  border-radius:$borderRadius;
+  font-size:$fontSize;
+  color:#ffffff;
+  box-sizing: border-box;
+  &:link {
+    color:#ffffff;
+  }
+  &:active{
+    color:hsla(0,0%,100%,.6);
+  }
+  &.disable {
+    background:$dispaly;
+    &:active {
+      background:$dispaly;
+    }
+  }
+}
+
+/*实心全屏*/
+.u-btn-primary {
+  background:$maincolor;
+  &:active {
+    background:$maincolor-deepen;
+  }
+}
+.u-btn-secondary {
+  background:$secondcolor;
+  &:active {
+    background:$secondcolor-deepen;
+  }
+}
+/*end*/
+
+/*空心全屏*/
+.u-btn-plain-default {
+  &:link {
+    color:$fontcolorLv3;
+  }
+  &:after {
+    @extend %border-all;
+    border-color:$bordercolor;
+    border-radius:$afterBorderRadius;
+  }
+}
+.u-btn-plain-primary {
+  &:link {
+    color: $maincolor;
+  }
+  &:after {
+    @extend %border-all;
+    border-color:$maincolor;
+    border-radius:$afterBorderRadius;
+  }
+}
+
+/*end*/
+
+/*实心小*/
+.u_btn_mini {
+  line-height: 1.9;
+  font-size: $fontSizeMini;
+  padding: 0 .75em;
+  display: inline-block;
+}
+/*end*/
+
+.u-btn + .u-btn {
+  margin-top:15px;
+}
+
+
+
+
+
+
+

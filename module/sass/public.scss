@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@import 'assembly/reset';/*清除默认*/
+@import 'assembly/extend'; /*用来被继承的占位样式*/
+@import 'assembly/color'; /*颜色控制文件*/
+@import 'assembly/ajaxLoadbox';
+
+html {
+  height:100%;
+}
+
+.test {
+  width:100px;
+  height:100px;
+  background:#f00;
+}
+
+
